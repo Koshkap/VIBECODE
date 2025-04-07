@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    overscroll-behavior: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  :root {
+    /* Apple-inspired colors */
+    --apple-black: #000000;
+    --apple-dark-gray: #1E1E1E;
+    --apple-light-gray: #ABABAB;
+    --apple-red: #FF3B30;
+    --apple-green: #34C759;
+    --apple-blue: #007AFF;
+    
+    /* Base Colors */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    
+    /* Card Colors */
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 100%;
+    
+    /* Popover Colors */
+    --popover: 0 0% 12%; 
+    --popover-foreground: 0 0% 100%;
+    
+    /* Primary Colors */
+    --primary: 211 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary Colors */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 67%;
+    
+    /* Muted Colors */
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 67%;
+    
+    /* Accent Colors */
+    --accent: 0 0% 15%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Destructive Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Border Colors */
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 211 100% 50%;
+    
+    /* Border Radius */
+    --radius: 0.5rem;
+  }
+}
+
+/* Input spinner removal */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.button-press {
+  transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.button-press:active {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
