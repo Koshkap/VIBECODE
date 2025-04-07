@@ -118,6 +118,7 @@ export function useWaypoints(
     waypoint,
     distance,
     directionGuidance,
+    bearing,
     setCustomWaypoint,
     selectSavedWaypoint,
     savedWaypoints,

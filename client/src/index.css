@@ -97,3 +97,20 @@ input[type="number"]::-webkit-inner-spin-button {
   transform: scale(0.95);
   opacity: 0.9;
 }
+
+/* Compass Styles */
+.degree-marker {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 10px;
+  width: 1px;
+  background-color: rgba(171, 171, 171, 0.3);
+  transform-origin: bottom center;
+}
+
+.degree-marker.major {
+  height: 15px;
+  width: 2px;
+  background-color: rgba(171, 171, 171, 0.5);
+}

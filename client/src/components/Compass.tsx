@@ -104,14 +104,24 @@ export default function Compass({ heading, isPointingNorth, waypoint, bearing = 
       {/* Waypoint Indicator */}
       <div 
         ref={waypointIndicatorRef}
-        className="absolute top-[50%] left-[50%] w-[4px] h-[45%] rounded-t-full z-10 -translate-x-1/2"
+        className="absolute top-[50%] left-[50%] w-[4px] h-[45%] z-10 -translate-x-1/2"
         style={{
           background: 'linear-gradient(to top, #34C759, #34C759 90%, transparent)',
           transformOrigin: 'bottom center',
           transition: 'transform 0.3s ease-out',
           display: 'none' // Will be shown via JS when in waypoint mode
         }}
-      ></div>
+      >
+        {/* Arrow tip for waypoint indicator */}
+        <div 
+          className="absolute -left-[6px] top-[10px] w-0 h-0"
+          style={{
+            borderLeft: '8px solid transparent',
+            borderRight: '8px solid transparent',
+            borderBottom: '12px solid #34C759'
+          }}
+        ></div>
+      </div>
       
       {/* Center Point */}
       <div className="absolute top-1/2 left-1/2 w-4 h-4 bg-[#007AFF] rounded-full -translate-x-1/2 -translate-y-1/2"></div>

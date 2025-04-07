@@ -27,6 +27,7 @@ export default function Home() {
     waypoint, 
     distance, 
     directionGuidance, 
+    bearing,
     setCustomWaypoint, 
     selectSavedWaypoint, 
     savedWaypoints,
@@ -74,6 +75,7 @@ export default function Home() {
           heading={heading} 
           isPointingNorth={isPointingNorth} 
           waypoint={waypoint}
+          bearing={bearing}
         />
         
         {/* Distance and Direction Display */}
@@ -89,6 +91,14 @@ export default function Home() {
             <span className="text-[#ABABAB]">Direction:</span>
             <span className="ml-2 text-xl font-bold text-[#34C759]">{directionGuidance}</span>
           </div>
+          
+          {/* Bearing Display (only when waypoint is set and not in north-pointing mode) */}
+          {!isPointingNorth && waypoint && (
+            <div className="mt-2 flex items-center">
+              <span className="text-[#ABABAB]">Bearing:</span>
+              <span className="ml-2 text-xl font-bold text-[#34C759]">{Math.round(bearing)}°</span>
+            </div>
+          )}
         </div>
       </main>
 
