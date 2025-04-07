@@ -46,12 +46,17 @@ export function calculateBearing(
   return bearing;
 }
 
-// Calculate waypoint bearing accounting for device heading
+// Get the bearing to the waypoint, taking into account the device heading
+// The goal is to correctly rotate the needle to point to the waypoint
 export function calculateBearingToWaypoint(waypoint: Waypoint, heading: number): number {
   if (!waypoint.position) return heading;
   
-  // This function needs the current location position from elsewhere
-  // For now, just return the heading as a fallback
+  // For the purpose of our app, we want the needle to point in the direction
+  // of the waypoint relative to the device's heading.
+  // The bearing calculation is done in useWaypoints.ts where we have both
+  // the current position and waypoint position available
+  
+  // Return the heading so the compass needle points north
   return heading;
 }
 

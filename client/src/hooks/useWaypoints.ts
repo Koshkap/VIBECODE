@@ -22,6 +22,7 @@ export function useWaypoints(
   const [distance, setDistance] = useState<string>("-- m");
   const [directionGuidance, setDirectionGuidance] = useState<string>("--");
   const [savedWaypoints, setSavedWaypoints] = useState<SavedWaypoint[]>([]);
+  const [bearing, setBearing] = useState<number>(0);
 
   // Set a custom waypoint
   const setCustomWaypoint = (lat: number, lng: number) => {
@@ -65,18 +66,21 @@ export function useWaypoints(
       setDistance(`${Math.round(distanceInMeters)} m`);
     }
 
+    // Calculate bearing whether pointing north or to waypoint
+    const calculatedBearing = calculateBearing(
+      currentPosition.latitude,
+      currentPosition.longitude,
+      waypoint.position.latitude,
+      waypoint.position.longitude
+    );
+    
+    // Update bearing
+    setBearing(calculatedBearing);
+
     // Only update direction guidance if we're not pointing north
     if (!isPointingNorth) {
-      // Calculate bearing
-      const bearing = calculateBearing(
-        currentPosition.latitude,
-        currentPosition.longitude,
-        waypoint.position.latitude,
-        waypoint.position.longitude
-      );
-
       // Get direction guidance based on bearing vs heading
-      const guidance = getDirectionGuidance(bearing, heading);
+      const guidance = getDirectionGuidance(calculatedBearing, heading);
       setDirectionGuidance(guidance);
     } else {
       setDirectionGuidance("--");
