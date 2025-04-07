@@ -93,7 +93,7 @@ export default function Compass({ heading, isPointingNorth, waypoint, bearing = 
       {/* Compass Needle */}
       <div 
         ref={needleRef}
-        className="absolute top-[50%] left-[50%] w-[4px] h-[45%] rounded-t-full z-10 -translate-x-1/2"
+        className="absolute top-[5%] left-[50%] w-[4px] h-[45%] rounded-t-full z-10 -translate-x-1/2"
         style={{
           background: 'linear-gradient(to top, #FF3B30, #FF3B30 90%, transparent)',
           transformOrigin: 'bottom center',
@@ -104,7 +104,7 @@ export default function Compass({ heading, isPointingNorth, waypoint, bearing = 
       {/* Waypoint Indicator */}
       <div 
         ref={waypointIndicatorRef}
-        className="absolute top-[50%] left-[50%] w-[4px] h-[45%] z-10 -translate-x-1/2"
+        className="absolute top-[5%] left-[50%] w-[4px] h-[45%] z-10 -translate-x-1/2"
         style={{
           background: 'linear-gradient(to top, #34C759, #34C759 90%, transparent)',
           transformOrigin: 'bottom center',

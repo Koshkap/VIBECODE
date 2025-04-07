@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Compass from "@/components/Compass";
 import WaypointForm from "@/components/WaypointForm";
 import PermissionOverlay from "@/components/PermissionOverlay";
+import Minimap from "@/components/Minimap";
 import { useCompass } from "@/hooks/useCompass";
 import { useGeolocation } from "@/hooks/useGeolocation";
 import { useWaypoints } from "@/hooks/useWaypoints";
@@ -100,6 +101,18 @@ export default function Home() {
             </div>
           )}
         </div>
+        
+        {/* Minimap (only shown when there are saved waypoints) */}
+        {savedWaypoints.length > 0 && (
+          <div className="mt-6 fadeIn">
+            <Minimap
+              currentPosition={currentPosition}
+              savedWaypoints={savedWaypoints}
+              activeWaypoint={waypoint?.name || null}
+              onSelectWaypoint={selectSavedWaypoint}
+            />
+          </div>
+        )}
       </main>
 
       {/* Waypoint Controls */}
