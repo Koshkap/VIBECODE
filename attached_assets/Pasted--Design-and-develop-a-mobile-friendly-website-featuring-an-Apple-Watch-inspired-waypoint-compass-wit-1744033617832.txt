@@ -1,0 +1,21 @@
+"Design and develop a mobile-friendly website featuring an Apple Watch-inspired waypoint compass with simple, intuitive features, optimized for phone screens. The compass should replicate the core functionality of the Apple Watch waypoint system, including the following features:
+
+Compass Display: A circular, animated compass that dynamically points to a user-defined waypoint or true north, using the phone’s magnetometer and GPS data (via browser APIs like DeviceOrientationEvent and Geolocation API). The needle should smoothly rotate to reflect direction changes.
+Waypoint Setting: Allow users to input a specific destination (latitude and longitude coordinates) manually via a simple form or tap to select from a predefined list of waypoints (e.g., 'Home', 'Car', 'Office').
+Distance Indicator: Display the real-time distance (in meters or kilometers) to the selected waypoint, updating as the user moves.
+Direction Feedback: Show a clear arrow or text indicator (e.g., 'Turn Left', 'Straight Ahead') based on the user’s current heading relative to the waypoint.
+Toggle North: Include a button to switch between waypoint mode (pointing to the destination) and true north mode.
+UI and Frontend Requirements:
+
+Layout: Create a clean, minimalist design inspired by the Apple Watch interface. Use a dark theme with high-contrast text (white or light gray) and subtle gradients for depth. The compass should dominate the screen (e.g., 70% of the viewport height), with controls below it.
+Compass Styling: Design the compass as a circular element with a sleek, modern look—include a red needle for direction, subtle degree markings (e.g., N, E, S, W at 0°, 90°, 180°, 270°), and a glowing ring effect for the active waypoint.
+Controls: Add a compact form for waypoint input (two fields: latitude and longitude) and a 'Set Waypoint' button. Include a 'Toggle North' button with an icon (e.g., a north arrow). Use rounded buttons with haptic-like feedback (CSS transitions for scale on tap).
+Responsive Design: Ensure the website is fully responsive for mobile devices (portrait orientation prioritized), with a max-width of 400px for larger screens. Use relative units (vw, vh, rem) for scalability.
+Typography: Use a sans-serif font (e.g., SF Pro or Roboto) for readability, with bold headings for distance and direction text.
+Animations: Implement smooth animations for the compass needle (CSS transitions or Web Animations API) and a fade-in effect for UI elements on page load.
+Technical Details:
+
+Build the frontend using HTML, CSS, and JavaScript. Leverage modern web APIs (DeviceOrientationEvent for compass heading, Geolocation API for user location) to power the functionality.
+Provide fallback text (e.g., 'Please enable location services') if permissions are denied or APIs are unsupported.
+Include a simple header with the title 'Waypoint Compass' and a footer with a subtle 'Powered by [Your Name/AI]' credit.
+The final output should be a functional, visually appealing webpage that feels like an Apple Watch app adapted for phone browsers, prioritizing simplicity and usability."
