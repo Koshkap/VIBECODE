@@ -17,16 +17,11 @@ export function useWaypoints(
   heading: number,
   isPointingNorth: boolean
 ) {
+  // State hooks
   const [waypoint, setWaypoint] = useState<Waypoint | null>(null);
   const [distance, setDistance] = useState<string>("-- m");
   const [directionGuidance, setDirectionGuidance] = useState<string>("--");
-
-  // Predefined waypoints
-  const savedWaypoints: SavedWaypoint[] = [
-    { name: "Home", position: { latitude: 37.7749, longitude: -122.4194 } },
-    { name: "Work", position: { latitude: 37.7833, longitude: -122.4167 } },
-    { name: "Car", position: { latitude: 37.7935, longitude: -122.3943 } }
-  ];
+  const [savedWaypoints, setSavedWaypoints] = useState<SavedWaypoint[]>([]);
 
   // Set a custom waypoint
   const setCustomWaypoint = (lat: number, lng: number) => {
@@ -88,12 +83,40 @@ export function useWaypoints(
     }
   }, [currentPosition, waypoint, heading, isPointingNorth]);
 
+  // Add waypoint from current location
+  const saveCurrentLocationAsWaypoint = (name: string) => {
+    if (!currentPosition) {
+      return false;
+    }
+    
+    // Create new waypoint
+    const newWaypoint: SavedWaypoint = {
+      name,
+      position: {
+        latitude: currentPosition.latitude,
+        longitude: currentPosition.longitude
+      }
+    };
+    
+    // Add to saved waypoints
+    setSavedWaypoints(prev => [...prev, newWaypoint]);
+    
+    // Select this waypoint immediately
+    setWaypoint({
+      name: newWaypoint.name,
+      position: newWaypoint.position
+    });
+    
+    return true;
+  };
+
   return {
     waypoint,
     distance,
     directionGuidance,
     setCustomWaypoint,
     selectSavedWaypoint,
-    savedWaypoints
+    savedWaypoints,
+    saveCurrentLocationAsWaypoint
   };
 }

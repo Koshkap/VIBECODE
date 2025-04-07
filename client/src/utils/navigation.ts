@@ -1,4 +1,5 @@
 import type { Waypoint } from '@/hooks/useWaypoints';
+import type { Position } from '@/hooks/useGeolocation';
 
 // Calculate distance between two coordinates in meters using Haversine formula
 export function calculateDistance(
@@ -49,7 +50,8 @@ export function calculateBearing(
 export function calculateBearingToWaypoint(waypoint: Waypoint, heading: number): number {
   if (!waypoint.position) return heading;
   
-  // This is what the needle will point to
+  // This function needs the current location position from elsewhere
+  // For now, just return the heading as a fallback
   return heading;
 }
 

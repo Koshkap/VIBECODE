@@ -29,7 +29,8 @@ export default function Home() {
     directionGuidance, 
     setCustomWaypoint, 
     selectSavedWaypoint, 
-    savedWaypoints 
+    savedWaypoints,
+    saveCurrentLocationAsWaypoint
   } = useWaypoints(currentPosition, heading, isPointingNorth);
 
   // Check if any permissions are not granted
@@ -98,6 +99,7 @@ export default function Home() {
         savedWaypoints={savedWaypoints}
         isPointingNorth={isPointingNorth}
         onTogglePointingMode={togglePointingMode}
+        onSaveCurrentLocation={saveCurrentLocationAsWaypoint}
       />
 
       {/* Permission Overlay */}
