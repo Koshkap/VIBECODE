@@ -1,4 +1,5 @@
 I built A waypoint compass webapp
+![image](https://github.com/user-attachments/assets/cf882c1f-d931-4686-b3d2-c36aa635cea9)
 
 The languages used are Typescript and HTML developed with Replit and Grok.
 
@@ -7,11 +8,18 @@ I had the vision, AI coded it and I would guide it to the completed product
 I am proud that it works for the most part and AI was capable enough to do the task.
 
 To improve for next time, I would upload my MVP to Github ASAP because I accidentally deleted it. I would also refine my prompts before having ai start coding them.
+#
+#
 **SCAN THIS QR CODE ON YOUR PHONE**
 ![image](https://github.com/user-attachments/assets/5279daa5-1755-454a-9c0c-dabebb3bd1ed)
 **^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**
 **^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^**
+**PRESS SWITCH TO WAYPOINT AT THE BOTTOM TO USE THE WAYPOINT FEATURE**
+![image](https://github.com/user-attachments/assets/edb26895-7ed9-4cde-aa78-5ec0cb98e796)
 
+#
+#
+#
 **IF THAT DOESN'T WORK:**
 
 REMIX THIS TO RUN
