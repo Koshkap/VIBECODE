@@ -21,7 +21,7 @@ To improve for next time, I would upload my MVP to Github ASAP because I acciden
 #
 #
 #
-**IF THAT DOESN'T WORK:**
+**IF THE QR CODE DOESN'T WORK:**
 
 REMIX THIS TO RUN
 https://replit.com/@hazzou/AppleWatchCompass
