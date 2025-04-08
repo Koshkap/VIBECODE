@@ -8,3 +8,5 @@ I am proud that it works for the most part and AI was capable enough to do the t
 
 To improve for next time, I would upload my MVP to Github ASAP because I accidentally deleted it. I would also refine my prompts before having ai start coding them.
 
+REMIX THIS TO RUN
+https://replit.com/@hazzou/AppleWatchCompass
