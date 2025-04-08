@@ -1,5 +1,6 @@
 I built A waypoint compass webapp
-![image](https://github.com/user-attachments/assets/cf882c1f-d931-4686-b3d2-c36aa635cea9)
+![image](https://github.com/user-attachments/assets/c4a4e6d6-bae5-4e83-9d6e-2381e889b7de)
+
 
 The languages used are Typescript and HTML developed with Replit and Grok.
 
